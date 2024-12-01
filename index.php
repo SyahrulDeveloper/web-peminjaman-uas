@@ -80,7 +80,7 @@ if (!isset($_SESSION['session_nim'])) {
                     </div>
                 </div>
                 <div class="carousel-item c-item">
-                    <img src="images/sarana1.jpg" class="d-block w-100 c-img" alt="...">
+                    <img src="images/dewisartika.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
                         <p class="fs-3 mt-5">Akses Kelas Lebih Mudah, Belajar Lebih Lancar!</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
