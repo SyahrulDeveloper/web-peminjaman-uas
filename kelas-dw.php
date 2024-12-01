@@ -68,9 +68,9 @@ if (!isset($_SESSION['session_nim'])) {
                         <h1 class="mt-4">Jadwal Kelas Dewi Sartika</h1>
                             <div class="card mb-5">
                                 <div class="card-header">
-                                    <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background: #ff8104">
+                                    <span class="btn text-white" style="background: #ff8104">
                                         Lantai 2
-                                    </button>
+                                    </span>
                                 </div>
                                 <div class="card-body">
                                     <table class="table table-bordered text-center">
@@ -143,9 +143,9 @@ if (!isset($_SESSION['session_nim'])) {
                             </div>
                             <div class="card mb-5">
                                 <div class="card-header">
-                                    <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background: #ff8104">
+                                    <span class="btn text-white" style="background: #ff8104">
                                         Lantai 3
-                                    </button>
+                                    </span>
                                 </div>
                                 <div class="card-body">
                                     <table class="table table-bordered text-center">
@@ -215,59 +215,6 @@ if (!isset($_SESSION['session_nim'])) {
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div
-                        class="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true"
-                        >
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                Silahkan isi data di bawah
-                                </h1>
-                                <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                                ></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                <div class="mb-3">
-                                    <input
-                                    type="text"
-                                    class="form-control"
-                                    id="exampleInputEmail1"
-                                    aria-describedby="emailHelp"
-                                    placeholder="Ruang Kelas"
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <input
-                                    type="datetime-local"
-                                    class="form-control"
-                                    id="exampleInputPassword1"
-                                    placeholder="waktu"
-                                    />
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input
-                                    type="checkbox"
-                                    class="form-check-input"
-                                    id="exampleCheck1"
-                                    />
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer"></div>
                             </div>
                         </div>
                     </div>

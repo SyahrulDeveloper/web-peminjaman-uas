@@ -15,4 +15,28 @@ if(isset($_POST['kirim_pesan'])){
     }
     
 }    
+// Book peminjaman kelas
+if(isset($_POST['pinjam_kelas'])){
+    $nama_mhs = $_POST['nama_mhs'];
+    $ruang_kelas = $_POST['ruang_kelas'];
+    $tanggal = $_POST['tanggal'];
+    $waktu = $_POST['waktu'];
+    $deskripsi = $_POST['deskripsi'];
+
+    $addtopeminjaman_dw = mysqli_query($koneksi, "INSERT INTO form_peminjaman_kelas_dw VALUES ('', '$nama_mhs', '$ruang_kelas', '$tanggal', '$waktu', '$deskripsi')");
+    if($addtopeminjaman_dw){  
+    header('location: form-dw.php');
+    exit();
+    }
+}    
+
+function query($query) {
+    global $koneksi;
+    $result = mysqli_query($koneksi, $query);
+    $rows_dw = [];
+    while ( $row_dw = mysqli_fetch_assoc($result)) {
+        $rows_dw[] = $row_dw;
+    }
+    return $rows_dw;
+}
 ?>
