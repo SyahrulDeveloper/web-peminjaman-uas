@@ -48,7 +48,7 @@ if (!isset($_SESSION['session_nim'])) {
                                     <i data-feather="user"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><p class="dropdown-item mb-1"><?php echo $_SESSION['session_nim'] ?></ppp</li>
+                                    <li><p class="dropdown-item mb-1"><?php echo $_SESSION['session_nim'] ?></p></li>
                                     <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                                 </ul>
                             </li>

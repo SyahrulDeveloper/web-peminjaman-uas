@@ -98,11 +98,13 @@ if (isset($_POST['login'])) {
                     <?php } ?>
                 </header>
                 <form action="" method="post">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg bg-light fs-6" name="nim" placeholder="NIM" value="" />
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control bg-light fs-6" name="nim" id="nim" placeholder="nim">
+                        <label for="nim">NIM</label>
                     </div>
-                    <div class="input-group mb-1">
-                        <input type="password" class="form-control form-control-lg bg-light fs-6" name="password" placeholder="Password" value="" />
+                    <div class="form-floating">
+                        <input type="password" class="form-control bg-light fs-6" name="password" id="password" placeholder="Password">
+                        <label for="password">Password</label>
                     </div>
                     <div class="form-check mb-3 mt-3">
                         <label for="formCheck" class="form-check-label text-secondary">
