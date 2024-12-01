@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
         $result1 = mysqli_fetch_array($query1);
 
         if (!isset($result1['nim']) || $result1['nim'] == '') {
-            $err .= "<li>NIM <b>$nim<b> tidak tersedia</li>";
+            $err .= "<li>NIM <b>$nim</b> tidak tersedia</li>";
         } elseif ($result1['password'] != ($password)) {
             $err .= "<li>Password yang di masukkan tidak sesuai</li>";
         }
