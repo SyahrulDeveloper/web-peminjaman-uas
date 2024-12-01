@@ -123,7 +123,7 @@ if (!isset($_SESSION['session_nim'])) {
                     <div class="card mb-4">
                         <img src="images/sarana1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Kelas Gedung Dewi Sartika</h5>
+                            <h5 class="card-title">Gedung Dewi Sartika</h5>
                             <p class="card-text">Kelas Gedung Dewi Sartika Digunakan Untuk Melaksanakan Kelas Mata Kuliah Teori Yang Ada Di Fakultas Ilmu Komputer</p>
                             <a href="kelas-dw.php" class="btn text-white" style="background: #ff7f00">Check Jadwal</a>
                         </div>
@@ -133,7 +133,7 @@ if (!isset($_SESSION['session_nim'])) {
                     <div class="card mb-4">
                         <img src="images/Lab-Programming-JPG.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">FIKLAB Gedung Ki Hadjar Dewantara</h5>
+                            <h5 class="card-title">Gedung Ki Hadjar Dewantara (FIKLAB)</h5>
                             <p class="card-text">FIKLAB Digunakan Untuk Melaksanakan Kelas Mata Kuliah Praktikum Yang Ada Di Fakultas Ilmu Komputer</p>
                             <a href="kelas-fiklab.php" class="btn text-white" style="background: #ff7f00">Check Jadwal</a>
                         </div>
