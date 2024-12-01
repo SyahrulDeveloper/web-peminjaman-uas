@@ -124,7 +124,7 @@ if (!isset($_SESSION['session_nim'])) {
                         <img src="images/sarana1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kelas Gedung Dewi Sartika</h5>
-                            <p class="card-text">Kelas Gedung Dewi Sartika Digunakan Untuk Melaksanakan Kelas Mata Kuliah Teori Yang Ada Di Fakultas Ilmu Komputer dekat smile garden</p>
+                            <p class="card-text">Kelas Gedung Dewi Sartika Digunakan Untuk Melaksanakan Kelas Mata Kuliah Teori Yang Ada Di Fakultas Ilmu Komputer</p>
                             <a href="kelas-dw.php" class="btn text-white" style="background: #ff7f00">Check Jadwal</a>
                         </div>
                     </div>
