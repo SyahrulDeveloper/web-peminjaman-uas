@@ -102,9 +102,10 @@ if (!isset($_SESSION['session_nim'])) {
                     <div class="card-body">
                         <div class="container my-5">
                             <h2 class="card-text">Layanan Peminjaman Ruangan</h2>
-                            <p class="card-text" style="text-align: justify;">Sistem Peminjaman Kelas untuk Fakultas Komputer dibuat untuk mahasiswa gabut 
-                                yang ingin meminjam kelas berdasarkan kebutuhan (Kelas pengganti atau Kelas tambahan). Dengan sistem peminjaman 
-                                kelas ini mahasiswa dan dosen bisa memakai kelas kosong.
+                            <p class="card-text" style="text-align: justify;">Sistem Peminjaman Kelas untuk Fakultas Komputer dirancang 
+                                untuk memfasilitasi mahasiswa dan dosen yang membutuhkan ruang kelas, baik untuk keperluan penggantian 
+                                jadwal maupun penambahan kelas. Melalui sistem ini, pengguna dapat meminjam ruang kelas yang tersedia 
+                                tanpa perlu mengunjungi layanan administrasi untuk memeriksa ketersediaan ruangan.
                             </p>
                         </div>
                     </div>
