@@ -68,7 +68,7 @@ if (!isset($_SESSION['session_nim'])) {
                 <div class="carousel-item active c-item">
                     <img src="images/gambar fik.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
-                        <p class="fs-3 mt-5">Selamat Datang Di Website Layanan Peminjaman Ruangan FIK</p>
+                        <p class="fs-3 mt-5">Selamat Datang User Di Website Layanan Peminjaman Ruangan FIK</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
                     </div>
                 </div>
