@@ -75,14 +75,14 @@ if (!isset($_SESSION['session_nim'])) {
                 <div class="carousel-item c-item">
                     <img src="images/Lab-Programming-JPG.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
-                        <p class="fs-3 mt-5">Selamat Datang Di Website Layanan Peminjaman Ruangan FIK</p>
+                        <p class="fs-3 mt-5">Mudah, Cepat, dan Efisien: Solusi Pemesanan Kelas Tanpa Batas!</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
                     </div>
                 </div>
                 <div class="carousel-item c-item">
                     <img src="images/sarana1.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
-                        <p class="fs-3 mt-5">Selamat Datang Di Website Layanan Peminjaman Ruangan FIK</p>
+                        <p class="fs-3 mt-5">Akses Kelas Lebih Mudah, Belajar Lebih Lancar!</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
                     </div>
                 </div>
