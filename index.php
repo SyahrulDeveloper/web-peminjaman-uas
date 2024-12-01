@@ -80,7 +80,7 @@ if (!isset($_SESSION['session_nim'])) {
                     </div>
                 </div>
                 <div class="carousel-item c-item">
-                    <img src="images/dewisartika.jpg" class="d-block w-100 c-img" alt="...">
+                    <img src="images/sarana1.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
                         <p class="fs-3 mt-5">Akses Kelas Lebih Mudah, Belajar Lebih Lancar!</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
@@ -123,7 +123,7 @@ if (!isset($_SESSION['session_nim'])) {
                     <div class="card mb-4">
                         <img src="images/sarana1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Gedung Dewi Sartika</h5>
+                            <h5 class="card-title">Kelas Gedung Dewi Sartika</h5>
                             <p class="card-text">Kelas Gedung Dewi Sartika Digunakan Untuk Melaksanakan Kelas Mata Kuliah Teori Yang Ada Di Fakultas Ilmu Komputer</p>
                             <a href="kelas-dw.php" class="btn text-white" style="background: #ff7f00">Check Jadwal</a>
                         </div>
@@ -133,7 +133,7 @@ if (!isset($_SESSION['session_nim'])) {
                     <div class="card mb-4">
                         <img src="images/Lab-Programming-JPG.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Gedung Ki Hadjar Dewantara (FIKLAB)</h5>
+                            <h5 class="card-title">FIKLAB Gedung Ki Hadjar Dewantara</h5>
                             <p class="card-text">FIKLAB Digunakan Untuk Melaksanakan Kelas Mata Kuliah Praktikum Yang Ada Di Fakultas Ilmu Komputer</p>
                             <a href="kelas-fiklab.php" class="btn text-white" style="background: #ff7f00">Check Jadwal</a>
                         </div>
