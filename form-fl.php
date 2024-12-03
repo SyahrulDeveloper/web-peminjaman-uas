@@ -100,7 +100,7 @@ $form_peminjaman_fl = query1("SELECT * FROM form_peminjaman_kelas_fl");
                                                     <td><?= $row_fl["nama_mahasiswa"] ?></td>
                                                     <td><?= $row_fl["jurusan"] ?></td>
                                                     <td><?= $row_fl["ruang_kelas"] ?></td>
-                                                    <td><?= $row_fl["tanggal"] ?></td>
+                                                    <td><?= $formatdate = date('d/m/Y', strtotime($row_fl["tanggal"])) ?></td>
                                                     <td><?= $row_fl["waktu"] ?></td>
                                                     <td><?= $row_fl["deskripsi"] ?></td>
                                                     <td>

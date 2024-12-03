@@ -105,7 +105,7 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                                     <td><?= $row_dw["nama_mahasiswa"] ?></td>
                                                     <td><?= $row_dw["jurusan"] ?></td>
                                                     <td><?= $row_dw["ruang_kelas"] ?></td>
-                                                    <td><?= $row_dw["tanggal"] ?></td>
+                                                    <td><?= $formatdate = date('d/m/Y', strtotime($row_dw["tanggal"])); ?></td>
                                                     <td><?= $row_dw["waktu"] ?></td>
                                                     <td><?= $row_dw["deskripsi"] ?></td>
                                                     <td>
