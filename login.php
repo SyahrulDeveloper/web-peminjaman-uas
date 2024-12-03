@@ -27,19 +27,19 @@ if (isset($_SESSION['session_nim'])) {
 if (isset($_POST['login'])) {
     $nim = $_POST['nim'];
     $password = $_POST['password'];
-    $ingataku = $_POST['ingataku'];
+    $ingataku = isset($_POST['ingataku']) ? $_POST['ingataku'] : '';
 
     if ($nim == '' or $password == '') {
-        $err .= "<li>Silakan masukkan nim dan juga password.</li>";
+        $err .= "<p>Silakan masukkan nim dan juga password.</p>";
     } else {
         $sql1 = "SELECT * FROM user WHERE nim = '$nim'";
         $query1 = mysqli_query($koneksi, $sql1);
         $result1 = mysqli_fetch_array($query1);
 
         if (!isset($result1['nim']) || $result1['nim'] == '') {
-            $err .= "<li>NIM <b>$nim</b> tidak tersedia</li>";
+            $err .= "<p>NIM <b>$nim</b> tidak tersedia</p>";
         } elseif ($result1['password'] != ($password)) {
-            $err .= "<li>Password yang di masukkan tidak sesuai</li>";
+            $err .= "<p>Password yang di masukkan tidak sesuai</p>";
         }
 
         if (empty($err)) {
@@ -73,7 +73,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
-    <title>Dashboard</title>
+    <title>Login</title>
 </head>
 
 <body>

@@ -4,11 +4,10 @@ if (!isset($_SESSION['session_nim'])) {
     header("location:login.php");
     exit();
 }
-$form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
+$form_peminjaman_fl = query1("SELECT * FROM form_peminjaman_kelas_fl");
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<title>Halaman Form Peminjaman</title>
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +17,7 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="css/style.css">
-
+    <title>Halaman Form Peminjaman</title>
 </head>
 
 <body>
@@ -40,22 +39,21 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
             <a href="#" class="sidebar-link" style="text-align: center;">
                 <span><?php echo $_SESSION['session_nim']; ?></span>
             </a>
-
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="kelas-dw.php" class="sidebar-link">
+                    <a href="kelas-fiklab.php" class="sidebar-link">
                         <i class="lni lni-calendar"></i>
                         <span>Jadwal</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="info-peminjaman-dw.php" class="sidebar-link">
+                    <a href="info-peminjaman-fl.php" class="sidebar-link">
                         <i class="lni lni-agenda"></i>
                         <span>Info Peminjaman</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="form-dw.php" class="sidebar-link">
+                    <a href="form-fl.php" class="sidebar-link">
                         <i class="lni lni-add-files"></i>
                         <span>Form Peminjaman</span>
                     </a>
@@ -70,13 +68,10 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
         </aside>
         <div class="main">
             <nav class="navbar navbar-expand px-4 py-3" style="background: linear-gradient(to right, #ffc107 , #ff4500);">
-                <h2 style="color: white; ">Form Peminjaman Dewi Sartika</h2>
+                <h2 style="color: white; ">Form Peminjaman FIKLAB</h2>
             </nav>
             <main class="content px-3 py-4">
                 <div class="container-fluid">
-
-
-
                     <div class="container-fluid">
                         <h3 class="mt-4">Kelas Yang Kamu Pinjam</h3>
                         <div class="card">
@@ -99,23 +94,23 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($form_peminjaman_dw as $row_dw) : ?>
-                                            <?php if ($row_dw["nim"] == $_SESSION['session_nim']): ?>
+                                        <?php foreach ($form_peminjaman_fl as $row_fl) : ?>
+                                            <?php if ($row_fl["nim"] == $_SESSION['session_nim']): ?>
                                                 <tr>
-                                                    <td><?= $row_dw["nama_mahasiswa"] ?></td>
-                                                    <td><?= $row_dw["jurusan"] ?></td>
-                                                    <td><?= $row_dw["ruang_kelas"] ?></td>
-                                                    <td><?= $row_dw["tanggal"] ?></td>
-                                                    <td><?= $row_dw["waktu"] ?></td>
-                                                    <td><?= $row_dw["deskripsi"] ?></td>
+                                                    <td><?= $row_fl["nama_mahasiswa"] ?></td>
+                                                    <td><?= $row_fl["jurusan"] ?></td>
+                                                    <td><?= $row_fl["ruang_kelas"] ?></td>
+                                                    <td><?= $row_fl["tanggal"] ?></td>
+                                                    <td><?= $row_fl["waktu"] ?></td>
+                                                    <td><?= $row_fl["deskripsi"] ?></td>
                                                     <td>
                                                         <div class="btn-group btn-group-sm" role="group">
                                                             <!-- Tombol Edit -->
-                                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $row_dw['id_dw'] ?>">
+                                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $row_fl['id_fl'] ?>">
                                                                 <i data-feather="edit" style="width: 20px; height: 20px"></i>
                                                             </button>
                                                             <!-- Tombol Hapus -->
-                                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $row_dw['id_dw'] ?>">
+                                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $row_fl['id_fl'] ?>">
                                                                 <i data-feather="trash" style="width: 20px; height: 20px"></i>
                                                             </button>
                                                         </div>
@@ -129,9 +124,9 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                 </table>
                             </div>
                             <!-- Modal Edit untuk setiap baris -->
-                            <?php foreach ($form_peminjaman_dw as $row_dw) : ?>
-                                <?php if ($row_dw["nim"] == $_SESSION['session_nim']): ?>
-                                    <div class="modal fade" id="editModal<?= $row_dw['id_dw'] ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                            <?php foreach ($form_peminjaman_fl as $row_fl) : ?>
+                                <?php if ($row_fl["nim"] == $_SESSION['session_nim']): ?>
+                                    <div class="modal fade" id="editModal<?= $row_fl['id_fl'] ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -140,47 +135,47 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                                 </div>
                                                 <form method="POST" action="">
                                                     <div class="modal-body">
-                                                        <input type="hidden" name="id_edit" value="<?= $row_dw['id_dw'] ?>">
+                                                        <input type="hidden" name="id_edit_fl" value="<?= $row_fl['id_fl'] ?>">
                                                         <div class="form-group mb-3">
-                                                            <input type="text" class="form-control" name="nama_mhs" value="<?= $row_dw['nama_mahasiswa'] ?>" placeholder="Nama Mahasiswa" required>
+                                                            <input type="text" class="form-control" name="nama_mhs_fl" value="<?= $row_fl['nama_mahasiswa'] ?>" placeholder="Nama Mahasiswa" required>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <select name="jurusan" value="<?= $row_dw['jurusan'] ?>" class="form-control w-100" required>
-                                                                <option value="">Pilih Kelas</option>
+                                                            <select name="jurusan" value="<?= $row_fl['jurusan'] ?>" class="form-control w-100" required>
+                                                                <option value="">Pilih Jurusan</option>
                                                                 <?php
                                                                 $query = mysqli_query($koneksi, "SELECT * FROM prodi");
                                                                 while ($data = mysqli_fetch_assoc($query)) {
-                                                                    $selected = ($data['jurusan'] == $row_dw['jurusan']) ? 'selected' : '';
+                                                                    $selected = ($data['jurusan'] == $row_fl['jurusan']) ? 'selected' : '';
                                                                     echo "<option value='{$data['jurusan']}' $selected>{$data['jurusan']}</option>";
                                                                 }
                                                                 ?>
                                                             </select>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <select name="ruang_kelas" value="<?= $row["ruang_kelas"] ?>" class="form-control w-100" required>
+                                                            <select name="ruang_kelas_fl" value="<?= $row_fl['ruang_kelas'] ?>" class="form-control w-100" required>
                                                                 <option value="">Pilih Kelas</option>
                                                                 <?php
-                                                                $query = mysqli_query($koneksi, "SELECT * FROM kelas_ds");
+                                                                $query = mysqli_query($koneksi, "SELECT * FROM kelas_fl");
                                                                 while ($data = mysqli_fetch_assoc($query)) {
-                                                                    $selected = ($data['ruang_kelas'] == $row_dw['ruang_kelas']) ? 'selected' : '';
+                                                                    $selected = ($data['ruang_kelas'] == $row_fl['ruang_kelas']) ? 'selected' : '';
                                                                     echo "<option value='{$data['ruang_kelas']}' $selected>{$data['ruang_kelas']}</option>";
                                                                 }
                                                                 ?>
                                                             </select>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <input type="date" class="form-control" name="tanggal" value="<?= $row_dw['tanggal'] ?>" required>
+                                                            <input type="date" class="form-control" name="tanggal_fl" value="<?= $row_fl['tanggal'] ?>" required>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <input type="text" class="form-control" name="waktu" value="<?= $row_dw['waktu'] ?>" placeholder="Waktu" required>
+                                                            <input type="text" class="form-control" name="waktu_fl" value="<?= $row_fl['waktu'] ?>" placeholder="Waktu" required>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <input type="text" class="form-control" name="deskripsi" value="<?= $row_dw['deskripsi'] ?>" placeholder="Deskripsi" required>
+                                                            <input type="text" class="form-control" name="deskripsi_fl" value="<?= $row_fl['deskripsi'] ?>" placeholder="Deskripsi" required>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-primary" name="update_form">Simpan Perubahan</button>
+                                                        <button type="submit" class="btn btn-primary" name="update_form_fl">Simpan Perubahan</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -188,10 +183,11 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
+
                             <!-- Modal Hapus untuk setiap baris -->
-                            <?php foreach ($form_peminjaman_dw as $row_dw) : ?>
-                                <?php if ($row_dw["nim"] == $_SESSION['session_nim']): ?>
-                                    <div class="modal fade" id="deleteModal<?= $row_dw['id_dw'] ?>" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <?php foreach ($form_peminjaman_fl as $row_fl) : ?>
+                                <?php if ($row_fl["nim"] == $_SESSION['session_nim']): ?>
+                                    <div class="modal fade" id="deleteModal<?= $row_fl['id_fl'] ?>" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -203,9 +199,9 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                                 </div>
                                                 <div class="modal-footer">
                                                     <form method="POST" action="">
-                                                        <input type="hidden" name="id_hapus" value="<?= $row_dw['id_dw'] ?>">
+                                                        <input type="hidden" name="id_hapus_fl" value="<?= $row_fl['id_fl'] ?>">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-danger" name="hapus_form">Hapus</button>
+                                                        <button type="submit" class="btn btn-danger" name="hapus_form_fl">Hapus</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -215,7 +211,7 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                             <?php endforeach; ?>
                         </div>
                     </div>
-                    <!-- Modal -->
+                    <!-- Modal Insert -->
                     <div
                         class="modal fade"
                         id="exampleModal"
@@ -240,12 +236,12 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                name="nama_mhs"
+                                                name="nama_mhs_fl"
                                                 id="exampleInputPassword1"
                                                 placeholder="Nama Mahasiswa" />
                                         </div>
                                         <div class="mb-3">
-                                            <select name="jurusan" value="<?= $row_dw['jurusan'] ?>" class="form-control w-100" required>
+                                            <select name="jurusan" value="<?= $row_fl['jurusan'] ?>" class="form-control w-100" required>
                                                 <option value="">Pilih Jurusan</option>
                                                 <?php
                                                 $query = mysqli_query($koneksi, "SELECT * FROM prodi");
@@ -256,10 +252,10 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <select type="text" name="ruang_kelas" class="form-control w-100" required>
+                                            <select type="text" name="ruang_kelas_fl" value="<?= $row_fl["ruang_kelas"] ?>" class="form-control w-100" required>
                                                 <option value="">Pilih Kelas</option>
                                                 <?php
-                                                $query = mysqli_query($koneksi, "SELECT * FROM kelas_ds");
+                                                $query = mysqli_query($koneksi, "SELECT * FROM kelas_fl");
                                                 while ($data = mysqli_fetch_assoc($query)) {
                                                     echo "<option value=$data[ruang_kelas]> $data[ruang_kelas] </option>";
                                                 }
@@ -270,7 +266,7 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                             <input
                                                 type="date"
                                                 class="form-control"
-                                                name="tanggal"
+                                                name="tanggal_fl"
                                                 id="exampleInputPassword1"
                                                 placeholder="Tanggal" />
                                         </div>
@@ -278,19 +274,19 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                name="waktu"
+                                                name="waktu_fl"
                                                 id="exampleInputPassword1"
                                                 placeholder="Waktu" />
                                         </div>
                                         <div class="mb-3">
                                             <input
                                                 type="text"
-                                                name="deskripsi"
+                                                name="deskripsi_fl"
                                                 class="form-control"
                                                 id="exampleInputPassword1"
                                                 placeholder="Deskripsi" />
                                         </div>
-                                        <button type="submit" class="btn btn-primary" name="pinjam_kelas">Submit</button>
+                                        <button type="submit" class="btn btn-primary" name="pinjam_kelas_fl">Submit</button>
                                 </form>
                             </div>
                             <div class="modal-footer"></div>

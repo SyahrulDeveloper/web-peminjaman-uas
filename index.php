@@ -14,7 +14,7 @@ if (!isset($_SESSION['session_nim'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
-    <title>Dashboard</title>
+    <title>Halaman Awal</title>
 </head>
 
 <body>
@@ -68,21 +68,21 @@ if (!isset($_SESSION['session_nim'])) {
                 <div class="carousel-item active c-item">
                     <img src="images/gambar fik.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
-                        <p class="fs-3 mt-5">Selamat Datang User Di Website Layanan Peminjaman Ruangan FIK</p>
+                        <p class="fs-4 mt-5">Selamat Datang <?php echo $_SESSION['session_nim']; ?> Di Website Layanan Peminjaman Ruangan FIK</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
                     </div>
                 </div>
                 <div class="carousel-item c-item">
                     <img src="images/Lab-Programming-JPG.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
-                        <p class="fs-3 mt-5">Mudah, Cepat, dan Efisien: Solusi Pemesanan Kelas Tanpa Batas!</p>
+                        <p class="fs-4 mt-5">Mudah, Cepat, dan Efisien: Solusi Pemesanan Kelas Tanpa Batas!</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
                     </div>
                 </div>
                 <div class="carousel-item c-item">
                     <img src="images/sarana1.jpg" class="d-block w-100 c-img" alt="...">
                     <div class="carousel-caption top-0 mt-4">
-                        <p class="fs-3 mt-5">Akses Kelas Lebih Mudah, Belajar Lebih Lancar!</p>
+                        <p class="fs-4 mt-5">Akses Kelas Lebih Mudah, Belajar Lebih Lancar dan Efektif!</p>
                         <h1 class="display-1 fw-bolder text-capitalize">Fakultas Ilmu Komputer</h1>
                     </div>
                 </div>
@@ -141,9 +141,6 @@ if (!isset($_SESSION['session_nim'])) {
                 </div>
             </div>
         </div>
-
-
-
         <!-- test -->
         <form action="" method="POST" onsubmit="myFunction()">
             <div class="container my-5" id="contact">
@@ -154,7 +151,7 @@ if (!isset($_SESSION['session_nim'])) {
                                 <div class="row pt-3">
                                     <!-- Form Column -->
                                     <div class="col-md-5">
-                                        <h2 class="card-text"><i data-feather="mail"></i> Kontak</h2>
+                                        <h2 class="card-text"><i data-feather="mail"></i> Feedback</h2>
                                         <hr>
                                         <div class="mb-3">
                                             <label for="kontak_nama" class="form-label">Nama</label>
@@ -180,6 +177,8 @@ if (!isset($_SESSION['session_nim'])) {
                                             width="100%" height="280" frameborder="0" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                         <hr>
                                         <p><i data-feather="map-pin"></i> Jl. RS. Fatmawati, Pondok Labu, Jakarta Selatan, 12450</p>
+                                        <p><i data-feather="mail"></i> upnvj@upnvj.ac.id.</p>
+                                        <p><i data-feather="phone"></i> (021)7656971</p>
                                     </div>
                                 </div>
                             </div>
