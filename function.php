@@ -87,8 +87,8 @@ if(isset($_POST['pinjam_kelas_fl'])){
     $deskripsi = $_POST['deskripsi_fl'];
     $nim = $_SESSION['session_nim'];
 
-    $addtopeminjaman_dw = mysqli_query($koneksi, "INSERT INTO form_peminjaman_kelas_fl VALUES ('', '$nama_mhs', '$jurusan', '$ruang_kelas', '$tanggal', '$waktu', '$deskripsi', '$nim')");
-    if($addtopeminjaman_dw){  
+    $addtopeminjaman_fl = mysqli_query($koneksi, "INSERT INTO form_peminjaman_kelas_fl VALUES ('', '$nama_mhs', '$jurusan', '$ruang_kelas', '$tanggal', '$waktu', '$deskripsi', '$nim')");
+    if($addtopeminjaman_fl){  
     header('location: form-fl.php');
     exit();
     }
