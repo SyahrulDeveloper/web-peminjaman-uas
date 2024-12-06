@@ -5,6 +5,9 @@ if (!isset($_SESSION['session_nim'])) {
     exit();
 }
 $form_peminjaman_fl = query1("SELECT * FROM form_peminjaman_kelas_fl");
+$user_entries = array_filter($form_peminjaman_fl, function($row) {
+    return $row["nim"] == $_SESSION['session_nim'];
+});
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,6 +83,7 @@ $form_peminjaman_fl = query1("SELECT * FROM form_peminjaman_kelas_fl");
                                     Form Peminjaman Kelas
                                 </button>
                             </div>
+                             <?php if (!empty($user_entries)): ?>
                             <div class="card-body">
                                 <table class="table table-bordered text-center">
                                     <thead>
@@ -118,11 +122,14 @@ $form_peminjaman_fl = query1("SELECT * FROM form_peminjaman_kelas_fl");
                                                 </tr>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
-                                        </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
+                            <?php else: ?>
+                            <div class="card-body">
+                                <p class="text-center text-muted">Anda belum melakukan peminjaman kelas. Silakan klik tombol "Form Peminjaman Kelas" untuk memulai.</p>
+                            </div>
+                            <?php endif; ?>
                             <!-- Modal Edit untuk setiap baris -->
                             <?php foreach ($form_peminjaman_fl as $row_fl) : ?>
                                 <?php if ($row_fl["nim"] == $_SESSION['session_nim']): ?>

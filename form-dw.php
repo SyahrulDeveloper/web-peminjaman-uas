@@ -5,6 +5,11 @@ if (!isset($_SESSION['session_nim'])) {
     exit();
 }
 $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
+
+$user_entries = array_filter($form_peminjaman_dw, function($row) {
+    return $row["nim"] == $_SESSION['session_nim'];
+});
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,6 +90,7 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                     Form Peminjaman Kelas
                                 </button>
                             </div>
+                            <?php if (!empty($user_entries)): ?>
                             <div class="card-body">
                                 <table class="table table-bordered text-center">
                                     <thead>
@@ -110,11 +116,9 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                                     <td><?= $row_dw["deskripsi"] ?></td>
                                                     <td>
                                                         <div class="btn-group btn-group-sm" role="group">
-                                                            <!-- Tombol Edit -->
                                                             <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $row_dw['id_dw'] ?>">
                                                                 <i data-feather="edit" style="width: 20px; height: 20px"></i>
                                                             </button>
-                                                            <!-- Tombol Hapus -->
                                                             <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $row_dw['id_dw'] ?>">
                                                                 <i data-feather="trash" style="width: 20px; height: 20px"></i>
                                                             </button>
@@ -123,11 +127,14 @@ $form_peminjaman_dw = query("SELECT * FROM form_peminjaman_kelas_dw");
                                                 </tr>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
-                                        </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
+                            <?php else: ?>
+                            <div class="card-body">
+                                <p class="text-center text-muted">Anda belum melakukan peminjaman kelas. Silakan klik tombol "Form Peminjaman Kelas" untuk memulai.</p>
+                            </div>
+                            <?php endif; ?>
                             <!-- Modal Edit untuk setiap baris -->
                             <?php foreach ($form_peminjaman_dw as $row_dw) : ?>
                                 <?php if ($row_dw["nim"] == $_SESSION['session_nim']): ?>
