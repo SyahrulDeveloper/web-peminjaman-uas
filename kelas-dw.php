@@ -86,8 +86,8 @@ if (!isset($_SESSION['session_nim'])) {
                                         <tr>
                                             <th scope="col">Hari</th>
                                             <th scope="col">Ruang Kelas</th>
-                                            <th scope="col">Waktu_Mulai</th>
-                                            <th scope="col">Waktu_Selesai</th>
+                                            <th scope="col">Waktu Mulai</th>
+                                            <th scope="col">Waktu Selesai</th>
                                         </tr>
                                     </thead>
                                     <tbody>
