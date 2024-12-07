@@ -25,14 +25,14 @@ if(isset($_POST['pinjam_kelas'])){
     $deskripsi = $_POST['deskripsi'];
     $nim = $_SESSION['session_nim'];
 
-    // Check for time conflict
+    // Check untuk jika kelas, tanggal, dan waktu yang sama
     $conflict_check = mysqli_query($koneksi, "SELECT * FROM form_peminjaman_kelas_dw 
         WHERE tanggal = '$tanggal' 
         AND waktu = '$waktu' 
         AND ruang_kelas = '$ruang_kelas'");
     
     if(mysqli_num_rows($conflict_check) > 0) {
-        // Time slot is already booked
+     
         echo "<script>
             alert('Maaf, ruang kelas sudah dipinjam pada waktu dan tanggal yang sama!');
             window.location.href = 'form-dw.php';
@@ -60,7 +60,7 @@ if(isset($_POST['update_form'])){
     $cek_milik_sendiri = mysqli_query($koneksi, "SELECT * FROM form_peminjaman_kelas_dw WHERE id_dw = '$id' AND nim = '".$_SESSION['session_nim']."'");
     
     if(mysqli_num_rows($cek_milik_sendiri) > 0) {
-        // Check for time conflict, excluding the current record
+        // Check untuk jika kelas, tanggal, dan waktu yang sama
         $conflict_check = mysqli_query($koneksi, "SELECT * FROM form_peminjaman_kelas_dw 
             WHERE tanggal = '$tanggal' 
             AND waktu = '$waktu' 
@@ -68,7 +68,7 @@ if(isset($_POST['update_form'])){
             AND id_dw != '$id'");
         
         if(mysqli_num_rows($conflict_check) > 0) {
-            // Time slot is already booked by another record
+  
             echo "<script>
                 alert('Maaf, ruang kelas sudah dipinjam pada waktu dan tanggal yang sama!');
                 window.location.href = 'form-dw.php';
@@ -89,7 +89,7 @@ if(isset($_POST['update_form'])){
         header("Location: form-dw.php");
         exit();
     } else {
-        // If the user tries to update a record that doesn't belong to them
+        
         echo "<script>
             alert(''Maaf, ruang kelas sudah dipinjam pada waktu dan tanggal yang sama!');
             window.location.href = 'form-dw.php';
@@ -123,13 +123,14 @@ if(isset($_POST['pinjam_kelas_fl'])){
     $deskripsi = $_POST['deskripsi_fl'];
     $nim = $_SESSION['session_nim'];
 
+    // Check untuk jika kelas, tanggal, dan waktu yang sama
     $conflict_check = mysqli_query($koneksi, "SELECT * FROM form_peminjaman_kelas_fl 
         WHERE tanggal = '$tanggal' 
         AND waktu = '$waktu' 
         AND ruang_kelas = '$ruang_kelas'");
 
      if(mysqli_num_rows($conflict_check) > 0) {
-        // Time slot is already booked
+
         echo "<script>
             alert('Maaf, ruang lab sudah dipinjam pada waktu dan tanggal yang sama!');
             window.location.href = 'form-fl.php';
@@ -158,7 +159,7 @@ if(isset($_POST['update_form_fl'])){
     $cek_milik_sendiri = mysqli_query($koneksi, "SELECT * FROM form_peminjaman_kelas_fl WHERE id_fl = '$id' AND nim = '".$_SESSION['session_nim']."'");
     
     if(mysqli_num_rows($cek_milik_sendiri) > 0) {
-        // Check for time conflict, excluding the current record
+        // Check untuk jika kelas, tanggal, dan waktu yang sama
         $conflict_check = mysqli_query($koneksi, "SELECT * FROM form_peminjaman_kelas_fl 
             WHERE tanggal = '$tanggal' 
             AND waktu = '$waktu' 
@@ -166,7 +167,7 @@ if(isset($_POST['update_form_fl'])){
             AND id_fl != '$id'");
         
         if(mysqli_num_rows($conflict_check) > 0) {
-            // Time slot is already booked by another record
+
             echo "<script>
                 alert('Maaf, ruang lab sudah dipinjam pada waktu dan tanggal yang sama!');
                 window.location.href = 'form-fl.php';
@@ -187,7 +188,7 @@ if(isset($_POST['update_form_fl'])){
         header("Location: form-fl.php");
         exit();
     } else {
-        // If the user tries to update a record that doesn't belong to them
+
         echo "<script>
             alert('Maaf, ruang lab sudah dipinjam pada waktu dan tanggal yang sama!');
             window.location.href = 'form-fl.php';
