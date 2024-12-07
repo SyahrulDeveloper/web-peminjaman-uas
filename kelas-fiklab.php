@@ -96,68 +96,49 @@ if (!isset($_SESSION['session_nim'])) {
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL201 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL201 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-202</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin  -->
-                                            <!-- <td>-</td> FL202 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL202 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-203</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL203 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL203 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-204</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL204 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL204 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
@@ -189,68 +170,49 @@ if (!isset($_SESSION['session_nim'])) {
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL301 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL301 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-302</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL302 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL302 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-303</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin --> 
-                                            <!-- <td>-</td> FL303 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL303 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-304</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin --> 
-                                            <!-- <td>-</td> FL304 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL304 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
@@ -282,50 +244,36 @@ if (!isset($_SESSION['session_nim'])) {
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL401 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL401 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-402</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL302 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL302 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
                                             <td rowspan="3" style="vertical-align: middle;">FL-403</td>
                                             <td>07:00</td>
                                             <td>08:40</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin --> 
-                                            <!-- <td>-</td> FL303 -->
                                             <td>08:40</td>
                                             <td>10:20</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>-</td> Senin -->
-                                            <!-- <td>-</td> FL303 -->
                                             <td>10:20</td>
                                             <td>12:00</td>
                                         </tr>
