@@ -26,7 +26,7 @@
 
 ![image](https://github.com/user-attachments/assets/22400a0a-a644-41e6-88d6-173bd07ea65a)
 
-## Halaman Gedung Ki Hadjar Dewantara
+## Halaman Gedung Ki Hadjar Dewantara (FIKLAB)
 ![image](https://github.com/user-attachments/assets/4ff12d50-d678-4f38-b04d-2acb2c1399a1)
 
 ![image](https://github.com/user-attachments/assets/8dee1259-6d25-48ed-9bd1-bbfe791c1ba8)
