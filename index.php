@@ -20,8 +20,6 @@ if (!isset($_SESSION['session_nim'])) {
 <body>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg bg-warning" style="background: linear-gradient(to right, #ffc107 , #ff4500);">
-            <!-- background: linear-gradient(to right, #ffc107 , #ff4500); -->
-            <!-- background: linear-gradient(to right, black , #ff4500 , #ff4500); -->
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="images/logo-fik-transparant.png" alt="Bootstrap" width="200" height="30">
